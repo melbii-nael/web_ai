@@ -1,0 +1,23 @@
+plugins{
+    id 'java'
+    id 'application'
+}
+group = 'com.app'
+version = '1.0-SNAPSHOT'
+
+repositories{
+    mavenCentral()
+}
+dependencies{
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
+    testImplemetation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+application{
+    mainClass = 'com.app.Main'
+}
+
+test{
+    useJUnitPlatform()
+}
